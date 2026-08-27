@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Light theme (default) — RGB triples so Tailwind can apply opacity. */
+  --color-paper: 250 250 249;       /* #FAFAF9 */
+  --color-paper-dim: 241 241 239;   /* #F1F1EF */
+  --color-surface: 255 255 255;     /* card panels — pure white */
+  --color-ink: 18 18 20;            /* #121214 */
+  --color-ink-soft: 58 59 63;       /* #3A3B3F */
+  --color-line: 227 227 224;        /* #E3E3E0 */
+  --color-line-strong: 203 203 199; /* #CBCBC7 */
+  --color-muted: 107 108 112;       /* #6B6C70 */
+  --color-signal: 52 84 209;        /* #3454D1 */
+  --color-signal-soft: 238 241 252; /* #EEF1FC */
+  --color-signal-dim: 40 64 158;    /* #28409E */
+}
+
+.dark {
+  --color-paper: 15 15 17;          /* #0F0F11 */
+  --color-paper-dim: 22 22 25;      /* #161619 */
+  --color-surface: 27 27 31;        /* card panels — raised dark surface */
+  --color-ink: 245 245 244;         /* #F5F5F4 */
+  --color-ink-soft: 197 197 201;    /* #C5C5C9 */
+  --color-line: 44 44 49;           /* #2C2C31 */
+  --color-line-strong: 63 63 69;    /* #3F3F45 */
+  --color-muted: 148 148 153;       /* #949499 */
+  --color-signal: 99 133 255;       /* #6385FF — brighter for dark contrast */
+  --color-signal-soft: 30 38 63;    /* #1E263F */
+  --color-signal-dim: 168 189 255;  /* #A8BDFF — lighter for text legibility */
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html,
+body {
+  background-color: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
+}
+
+body {
+  font-family: var(--font-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: rgb(var(--color-signal));
+  color: rgb(var(--color-paper));
+}
+
+/* Visible, consistent keyboard focus ring across the site */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-signal));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Utility: eyebrow label style used across sections */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-muted));
+}
+
+/* Utility: hairline section divider */
+.hairline {
+  border-top: 1px solid rgb(var(--color-line));
+}
+
+/* Scrollbar - subtle, not default browser chrome */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-paper));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-line-strong));
+  border-radius: 8px;
+  border: 2px solid rgb(var(--color-paper));
+}
+
+/* Skip link for keyboard/screen reader users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: rgb(var(--color-ink));
+  color: rgb(var(--color-paper));
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
