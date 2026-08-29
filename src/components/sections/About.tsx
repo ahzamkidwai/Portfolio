@@ -37,7 +37,7 @@ export default function About() {
           <SectionHeading
             eyebrow="About"
             title="An engineer who builds the pipeline, not just the interface."
-            description="I work across the stack that modern AI products actually need — from mobile and web frontends, to backend APIs, to the retrieval and agent systems underneath. Currently pursuing an M.Tech in Computer Engineering at Aligarh Muslim University, alongside shipping production software."
+            description="I work across the stack that modern AI products actually need — from mobile and web frontends, to backend APIs, to the retrieval and agent systems underneath. Currently pursuing M.Tech in Computer Engineering at Aligarh Muslim University, alongside shipping production software."
             className="mb-0"
           />
 

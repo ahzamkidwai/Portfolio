@@ -19,7 +19,7 @@ export const personal: PersonalInfo = {
     gfg: "https://www.geeksforgeeks.org/user/ahzamnaseemkidwai/",
   },
   githubUsername: "ahzamkidwai",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1VnpDYOICBJQ5qg5KMlv8ujbQMesL_CQz/view?usp=sharing",
   availability: {
     show: true,
     label: "Open to Software Engineering / AI Engineering opportunities",
@@ -32,7 +32,7 @@ export const navLinks: NavLink[] = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#education", label: "Education" },
-  { href: "#achievements", label: "Achievements" },
+  // { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];
 

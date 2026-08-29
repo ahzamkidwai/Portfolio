@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Code2, Mail, Phone, FileText } from "lucide-react";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import Container from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { personal } from "@/lib/data/personal";
@@ -11,10 +12,10 @@ import BackgroundGrid from "@/components/effects/BackgroundGrid";
 const socials = [
   { href: personal.links.github, icon: Github, label: "GitHub" },
   { href: personal.links.linkedin, icon: Linkedin, label: "LinkedIn" },
-  { href: personal.links.leetcode, icon: Code2, label: "LeetCode" },
-  { href: personal.links.gfg, icon: FileText, label: "GeeksforGeeks" },
+  { href: personal.links.leetcode, icon: SiLeetcode, label: "LeetCode" },
+  { href: personal.links.gfg, icon: SiGeeksforgeeks, label: "GeeksforGeeks" },
   { href: `mailto:${personal.email}`, icon: Mail, label: "Email" },
-  { href: `tel:${personal.phone}`, icon: Phone, label: "Phone" },
+  { href: `tel:${personal.phone}`, icon: Phone, label: "Phone" }
 ];
 
 const container = {
@@ -64,9 +65,9 @@ export default function Hero() {
             <ButtonLink href={personal.resumeUrl} external variant="secondary">
               View Resume
             </ButtonLink>
-            <ButtonLink href="#contact" variant="ghost">
+            {/* <ButtonLink href="#contact" variant="ghost">
               Contact Me
-            </ButtonLink>
+            </ButtonLink> */}
           </motion.div>
 
           <motion.div variants={item} className="mt-10 flex gap-5">
