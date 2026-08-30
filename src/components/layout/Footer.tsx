@@ -59,7 +59,7 @@ export default function Footer() {
 
       <Container className="mt-10 flex flex-col-reverse items-center justify-between gap-3 border-t border-line pt-6 text-xs text-muted md:flex-row">
         <p>© {year} {personal.name}. All rights reserved.</p>
-        <p className="font-mono">Built with Next.js, TypeScript &amp; AI.</p>
+        {/* <p className="font-mono">Built with Next.js, TypeScript &amp; AI.</p> */}
       </Container>
     </footer>
   );
