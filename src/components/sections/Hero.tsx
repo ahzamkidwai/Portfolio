@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { personal } from "@/lib/data/personal";
 import SceneWrapper from "@/components/3d/SceneWrapper";
 import BackgroundGrid from "@/components/effects/BackgroundGrid";
+import HeroTiltCard from "../effects/HeroTiltCard";
 
 const socials = [
   { href: personal.links.github, icon: Github, label: "GitHub" },
@@ -86,7 +87,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -97,7 +98,8 @@ export default function Hero() {
             fallbackLabel="Software → Data → AI → Agents → Applications"
             className="h-full w-full"
           />
-        </motion.div>
+        </motion.div> */}
+        <HeroTiltCard className="hidden md:block" />
       </Container>
     </section>
   );
