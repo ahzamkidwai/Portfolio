@@ -14,6 +14,7 @@ function validate(body: Partial<ContactPayload>): string | null {
     return "A valid email is required.";
   }
   if (!body.subject?.trim()) return "Subject is required.";
+  
   if (!body.message?.trim() || body.message.trim().length < 10) {
     return "Message must be at least 10 characters.";
   }
